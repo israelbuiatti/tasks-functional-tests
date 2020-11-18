@@ -20,8 +20,8 @@ public class HealthCheckIT {
 		try {
 			driver.navigate().to("http://192.168.1.6:8002/tasks");
 			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-			String version = driver.findElement(By.id("version")).getText();
-			Assert.assertTrue(version.startsWith("build"));
+			String version = driver.findElement(By.id("addTodo")).getText();
+			Assert.assertTrue(version.startsWith("Add"));
 		} finally {
 			driver.quit();
 		}
